@@ -6,9 +6,9 @@ const axios = require("axios");
 
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
-const mongoURl = "mongodb+srv://parth284:parth9874@cluster0.9fb3w.mongodb.net/myData?retryWrites=true&w=majority"
+const mongoURl = "mongodb+srv://<YOURID>:<YOUR_PASSWORD>@cluster0.9fb3w.mongodb.net/myData?retryWrites=true&w=majority || 'mongodb://localhost/myData'"
 mongoose.connect(mongoURl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
