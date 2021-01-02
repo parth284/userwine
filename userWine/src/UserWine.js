@@ -9,20 +9,14 @@ const Users = ()=>{
         fetchData();
         setInterval(() => {
             fetchData();
-        }, 16000);
+        }, 15000);
     },[])
 
     const fetchData = async () => {
-        // const {data} = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php');
-        
-        // const user = await axios.get("https://randomuser.me/api/");
-
-        // setDatas(datas=>[ ...datas, {drinks:data.drinks[0],
-        //         user:user.data.results[0]}])
 
         const mongo = await axios.get('/api');
         setData(mongo.data);
-        console.log(mongo.data[0]);
+        console.log(mongo);
     }
     
 
