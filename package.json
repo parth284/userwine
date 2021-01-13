@@ -8,9 +8,9 @@
     "build": "cd userWine && npm run build",
     "install-userWine": "cd userWine && npm install",
     "heroku-postbuild": "npm run install-userWine && npm run build",
-    "start": "node server.js",
+    "dev": "node Server.js",
     "client": "cd userWine && npm start",
-    "dev": "concurrently \"node Server.js\" \"npm run client\""
+    "start": "concurrently \"npm dev\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
